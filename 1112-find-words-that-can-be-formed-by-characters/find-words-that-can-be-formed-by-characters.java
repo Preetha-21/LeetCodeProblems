@@ -27,7 +27,7 @@ class Solution {
                 count+=s;
             }
             list.clear();
-             for(int l=0;l<=chars.length();l++)
+             for(int l=0;l<chars.length();l++)
              {
                list.add(chars.charAt(l));
               }
