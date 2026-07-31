@@ -1,6 +1,6 @@
 class Solution {
     public int countCharacters(String[] words, String chars) {
-        ArrayList<Character> list1=new ArrayList<>();
+        ArrayList<Character> list=new ArrayList<>();
         int count=0;
         int s=0;
         for(int i=0;i<chars.length();i++)
