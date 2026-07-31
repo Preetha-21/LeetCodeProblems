@@ -5,7 +5,7 @@ class Solution {
         int s=0;
         for(int i=0;i<chars.length();i++)
         {
-            list1.add(chars.charAt(i));
+            list.add(chars.charAt(i));
         }
         for(int i=0;i<words.length;i++)
         {
