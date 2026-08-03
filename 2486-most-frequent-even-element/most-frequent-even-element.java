@@ -1,0 +1,29 @@
+class Solution {
+    public int mostFrequentEven(int[] nums)
+    {
+        HashMap<Integer,Integer> map=new HashMap<>();
+        Arrays.sort(nums);
+        for(int i=0;i<nums.length;i++)
+        {
+            if(nums[i]%2==0)
+            {
+             map.put(nums[i],map.getOrDefault(nums[i],0)+1);
+            }
+        }
+        System.out.print(map);
+        int min=0;
+        int ans=-1;
+        for(int i:nums)
+        {
+            if(i%2==0)
+            {
+            if(map.get(i)>min)
+            {
+                min=map.get(i);
+                ans=i;
+            }
+            }
+        }
+        return ans;
+    }
+}
