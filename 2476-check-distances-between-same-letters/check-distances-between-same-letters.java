@@ -3,6 +3,10 @@ class Solution {
         char a[]=s.toCharArray();
         for(int i=0;i<s.length();i++)
         {
+            if(s.charAt(i)==',')
+            {
+                continue;
+            }
             int b=s.indexOf(s.charAt(i));
             int c=s.lastIndexOf(s.charAt(i));
             c=c-1;
