@@ -1,29 +1,24 @@
 class Solution {
     public boolean checkDistances(String s, int[] distance) {
+        char a[]=s.toCharArray();
         for(int i=0;i<s.length();i++)
         {
+            int b=s.indexOf(s.charAt(i));
+            int c=s.lastIndexOf(s.charAt(i));
+            c=c-1;
+            int dif=c-b;
             char ch=s.charAt(i);
-            int count=0;
-            for(int j=i+1;j<s.length();j++)
+            int h=ch-'a';
+            String l=Character.toString(s.charAt(i));
+            s.replace(l,",");
+            if(distance[h]==dif)
             {
-              char ch1=s.charAt(j);
-              {
-                if(ch==ch1)
-                {
-                    int a=ch-'a';
-                    if(distance[a]==count)
-                    {
-                        continue;
-                    }
-                    else{
-                        return false;
-                    }
-                }
-                else{
-                    count++;
-                }
-              }
+                continue;
             }
+            else{
+                return false;
+            }
+        
         }
         return true;
     }
